@@ -7,10 +7,10 @@ from rest_framework.test import APIClient
 class HealthSystemTests(TestCase):
 
     def setUp(self):
-        # Initialize API client for making requests
+        
         self.client = APIClient()
 
-        # Create a program (e.g., 'HIV Program')
+        
         self.program = Program.objects.create(name="HIV Program")
 
         # Create a client and enroll them in the 'HIV Program'
@@ -56,17 +56,15 @@ class HealthSystemTests(TestCase):
 
         # Ensure the response status code is 200 OK
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-
-        # Ensure the 'HIV Program' is included in the enrolled programs list
+        
         self.assertIn("HIV Program", [program['name'] for program in response.data['enrolled_programs']])
 
-        # Additional checks on client data
         self.assertEqual(response.data['first_name'], self.client_instance.first_name)
         self.assertEqual(response.data['last_name'], self.client_instance.last_name)
         self.assertEqual(response.data['email'], self.client_instance.email)
 
     def tearDown(self):
-        # Clean up any objects after tests run
+    
         self.client_instance.delete()
         self.program.delete()
 
