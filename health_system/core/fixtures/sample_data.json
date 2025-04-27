@@ -1,0 +1,55 @@
+[
+    {
+      "model": "core.healthprogram",
+      "pk": 1,
+      "fields": {
+        "name": "Malaria",
+        "description": "Malaria prevention and treatment program"
+      }
+    },
+    {
+      "model": "core.healthprogram",
+      "pk": 2,
+      "fields": {
+        "name": "Tuberculosis",
+        "description": "TB awareness and treatment"
+      }
+    },
+    {
+      "model": "core.client",
+      "pk": 1,
+      "fields": {
+        "full_name": "Palma Ochieng",
+        "age": 30,
+        "contact_number": "1234567890"
+      }
+    },
+    {
+      "model": "core.client",
+      "pk": 2,
+      "fields": {
+        "full_name": "Jane Wanjala",
+        "age": 28,
+        "contact_number": "9876543210"
+      }
+    },
+    {
+      "model": "core.enrollment",
+      "pk": 1,
+      "fields": {
+        "client": 1,
+        "program": 1,
+        "enrolled_on": "2024-01-10"
+      }
+    },
+    {
+      "model": "core.enrollment",
+      "pk": 2,
+      "fields": {
+        "client": 2,
+        "program": 2,
+        "enrolled_on": "2024-02-15"
+      }
+    }
+  ]
+  
