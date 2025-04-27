@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Client,HealthProgram,Enrollment
+from health_system.core.models import Client,HealthProgram,Enrollment
 
 class HealthProgramSerializer(serializers.ModelSerializer):
     enrolled_programs = serializers.PrimaryKeyRelatedField(queryset=HealthProgram.objects.all(), many=True)

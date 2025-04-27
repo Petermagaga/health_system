@@ -2,9 +2,9 @@ services:
   - type: web
     name: health-system
     env: python
-    plan: free 
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn health_system.wsgi:application
+    plan: free
+    buildCommand: cd health_system && pip install -r requirements.txt
+    startCommand: cd health_system && gunicorn health_system.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: health_system.settings

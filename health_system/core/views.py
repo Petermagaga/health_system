@@ -1,5 +1,5 @@
 from rest_framework import viewsets,generics,filters
-from .models import Client,HealthProgram,Enrollment
+from health_system.core.models import Client,HealthProgram,Enrollment
 from .serializers import ClientSerializer,HealthProgramSerializer,EnrollmentSerializer
 
 class ClientViewSet(viewsets.ModelViewSet):
