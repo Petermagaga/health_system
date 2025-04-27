@@ -3,9 +3,7 @@ services:
     name: health-system
     env: python
     plan: free 
-    buildCommand: |
-      cd health_system
-      pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn health_system.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
