@@ -1,1 +1,1 @@
-web: gunicorn health_system.wsgi
+web: gunicorn health_system.wsgi:application
